@@ -62,7 +62,7 @@ router.put('/updatenote/:id', fetchuser, async (req, res) => {
         if (note.user.toString() !== req.user.id) {
             return res.status(401).send("Not allowed");
         }
-        note = await Note.findOneAndUpdate(req.params.id, { $set: newNote }, { new: true }); // true will allow to to add new items 
+        note = await Note.findOneAndUpdate({_id: req.params.id}, { $set: newNote }, { new: true }); // true will allow to to add new items 
         res.json({ note });
     } catch (error) {
         console.log(error.message);
@@ -83,7 +83,7 @@ router.delete('/deletenote/:id', fetchuser, async (req, res) => {
         if (note.user.toString() !== req.user.id) {
             return res.status(401).send("Not allowed");
         }
-        note = await Note.findByIdAndDelete(req.params.id); // true will allow to to add new items 
+        note = await Note.findByIdAndDelete({_id: req.params.id}); // true will allow to to add new items 
         res.json({ "Success": "Note has been deleted", note: note });
 
     } catch (error) {
