@@ -143,7 +143,7 @@ const NoteState = (props) => {
     //   setNotes(newNotes);
 
     // My logic
-    let notes1 = notes;
+    let notes1 = JSON.parse(JSON.stringify(notes));
 
     for (let index = 0; index < notes1.length; index++) {
       let element = notes1[index];
