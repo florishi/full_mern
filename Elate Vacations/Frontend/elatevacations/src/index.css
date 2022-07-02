@@ -1,0 +1,53 @@
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header-text{
+  color: #606080;
+  font-weight: 500;
+  margin-top: 17px;
+  font-size: 17px;
+}
+
+.container{
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.top-left{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.tag-card{
+  margin: 10px 0 0 20px;
+  color: #a1a1b3;
+}
+
+.tourName{
+  color: #f48f81;
+  font-size: 18px;
+  margin:  0 0 0 4px;
+  font-weight: 500;
+}
+
+.tagErrMsg{
+  color: red;
+  margin-top: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+h4:after{
+  left: 0.5rem;
+  margin-right: -50%;
+}
+  
+
